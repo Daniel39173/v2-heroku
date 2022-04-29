@@ -161,20 +161,24 @@ https://github.com/badafans/better-cloudflare-ip
 ![EnvironmentsDeploy](./readme-data/EnvironmentsDeploy.png)
 
 ## VLESS websocket 客户端配置
-
 <details>
+
 <summary>You can use Cloudflare Workers to transfer traffic, (supporting WS mode of VLESS\VMESS\Trojan-Go) is configured as:</summary>
-const SingleDay = 'herokuapp'
-const DoubleDay = 'herokuapp'
+
+```js
+const SingleDay = 'xxx.herokuapp.com'
+const DoubleDay = 'xxx.herokuapp.com'
 addEventListener(
     "fetch",event => {
-            let nd = new Date();
+   
+        let nd = new Date();
         if (nd.getDate()%2) {
             host = SingleDay
         } else {
             host = DoubleDay
         }
-                let url=new URL(event.request.url);
+     
+        let url=new URL(event.request.url);
         url.hostname=host;
         let request=new Request(url,event.request);
         event. respondWith(
@@ -182,6 +186,8 @@ addEventListener(
         )
     }
 )
+```
+
 </details>
 ### JSON
 
