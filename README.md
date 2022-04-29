@@ -166,8 +166,8 @@ https://github.com/badafans/better-cloudflare-ip
 <summary>You can use Cloudflare Workers to transfer traffic, (supporting WS mode of VLESS\VMESS\Trojan-Go) is configured as:</summary>
 
 ```js
-const SingleDay = 'xxx.herokuapp.com'
-const DoubleDay = 'xxx.herokuapp.com'
+const SingleDay = 'herokuapp'
+const DoubleDay = 'herokuapp'
 addEventListener(
     "fetch",event => {
    
